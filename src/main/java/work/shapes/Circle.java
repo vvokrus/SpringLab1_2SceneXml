@@ -45,7 +45,7 @@ public class Circle extends Shape{
 
     @Override
     public void draw() {
-        System.out.println("Drawing Point. Color:"+getColor()+
+        System.out.println("Drawing Circle. Color:"+getColor()+
                 " Center: "+center+
                 ". Radius:"+getRadius());
     }
