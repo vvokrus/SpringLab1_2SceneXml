@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="coords" class="work.shapes.Coords" scope="prototype"/>
+
+    <bean id="point1" class="work.shapes.Point" scope="prototype">
+        <constructor-arg ref="coords"/>
+        <property name="color" value="BLUE"/>
+        <property name="y" value="3"/>
+        <property name="x" value="4"/>
+    </bean>
+    <bean id="point2" class="work.shapes.Point" scope="prototype">
+        <constructor-arg ref="coords"/>
+        <property name="color" value="BLUE"/>
+        <property name="y" value="6"/>
+        <property name="x" value="8"/>
+    </bean>
+    <bean id="circle1" class="work.shapes.Circle" scope="prototype">
+        <constructor-arg ref="coords"/>
+        <property name="x" value="3"/>
+        <property name="y" value="4"/>
+        <property name="radius" value="2"/>
+        <property name="color" value="BLUE"/>
+    </bean>
+    <bean id="circle2" class="work.shapes.Circle" scope="prototype">
+        <constructor-arg ref="coords"/>
+        <property name="x" value="3"/>
+        <property name="y" value="4"/>
+        <property name="radius" value="2"/>
+        <property name="color" value="BLUE"/>
+     </bean>
+
+    <bean id="scene" class="work.Scene" autowire="constructor">
+<!--        <constructor-arg>-->
+<!--            <list>-->
+<!--                <ref bean="point1"/>-->
+<!--                <ref bean="circle1"/>-->
+<!--                <ref bean="point2"/>-->
+<!--                <ref bean="circle2"/>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+<!--        <property name="shapes">-->
+<!--            <list>-->
+<!--                <ref bean="point1"/>-->
+<!--                <ref bean="circle1"/>-->
+<!--                <ref bean="point2"/>-->
+<!--                <ref bean="circle2"/>-->
+<!--            </list>-->
+<!--        </property>-->
+
+    </bean>
+</beans>
